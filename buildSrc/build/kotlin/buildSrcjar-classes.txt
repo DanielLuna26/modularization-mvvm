@@ -1,0 +1,1 @@
+/Users/daniel/Documents/android/ModularizationMVVM/buildSrc/build/classes/kotlin/main/AndroidConfig.class:/Users/daniel/Documents/android/ModularizationMVVM/buildSrc/build/classes/kotlin/main/ExtensionUtilKt.class
