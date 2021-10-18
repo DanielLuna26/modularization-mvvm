@@ -6,4 +6,5 @@ object Versions {
     const val constraintLayout = "2.1.0"
     const val support = "1.0.0"
     const val annotations = "1.0.0"
+    const val gradle = "7.0.2"
 }

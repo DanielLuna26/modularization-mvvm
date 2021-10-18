@@ -5,6 +5,7 @@ plugins {
 
 apply {
     from("$rootDir/commons.gradle")
+    from("$rootDir/core_dependencies.gradle")
 }
 
 android {
