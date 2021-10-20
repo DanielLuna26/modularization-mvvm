@@ -8,6 +8,7 @@ apply {
 }
 
 dependencies {
+    implementation(project(":common"))
     implementation(Dependencies.coroutinesCore)
     implementation(Dependencies.coroutines)
 }

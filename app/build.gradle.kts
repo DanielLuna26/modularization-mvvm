@@ -1,6 +1,7 @@
 plugins {
     id(Plugin.application)
     id(Plugin.kotlinAndroid)
+    id("scripts.variants")
 }
 
 apply {
@@ -15,6 +16,9 @@ android {
         testInstrumentationRunner = AndroidConfig.androidTestInstrumentation
     }
 
+    sourceSets {
+        map { it.java.srcDir("src/${it.name}/java") }
+    }
 }
 
 dependencies {

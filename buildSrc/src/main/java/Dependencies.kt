@@ -6,4 +6,13 @@ object Dependencies {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val support = "androidx.legacy:legacy-support-v4:${Versions.support}"
     const val annotationLibrary = "androidx.annotation:annotation:${Versions.annotations}"
+
+    // Coroutines
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+
+    // Apollo
+    const val apolloRuntime = "com.apollographql.apollo:apollo-runtime:${Versions.apollo}"
+    const val apolloCoroutines = "com.apollographql.apollo:apollo-coroutines-support:${Versions.apollo}"
+
 }
