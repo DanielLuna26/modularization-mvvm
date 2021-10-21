@@ -24,6 +24,11 @@ android {
 dependencies {
     implementation(project(":common"))
 
+    implementation(Dependencies.lifecycleRuntime)
+    implementation(Dependencies.viewModel)
+    implementation(Dependencies.liveData)
+    implementation(Dependencies.lifecycleCompiler)
+
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")

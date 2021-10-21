@@ -1,0 +1,68 @@
+type RootQueryType {
+  post(id: Int): Post
+  posts(userId: Int): [Post]
+  comment(id: Int): Comment
+  comments(postId: Int): [Comment]
+  album(id: Int): Album
+  albums(userId: Int): [Album]
+  photo(id: Int): Photo
+  photos(albumId: Int): [Photo]
+  todo(id: Int): Todo
+  todos(userId: Int, completed: Boolean): [Todo]
+  user(id: Int): User
+  users: [User]
+}
+
+type Post {
+  user: User
+  userId: Int
+  id: Int
+  title: String
+  body: String
+}
+
+type User {
+  id: Int
+  name: String
+  username: String
+  email: String
+  phone: String
+  website: String
+}
+
+type Comment {
+  post: Post
+  postId: Int
+  id: Int
+  name: String
+  email: String
+  body: String
+}
+
+type Album {
+  user: User
+  userId: Int
+  id: Int
+  title: String
+}
+
+type Photo {
+  album: Album
+  albumId: Int
+  id: Int
+  title: String
+  url: String
+  thumbnailUrl: String
+}
+
+type Todo {
+  user: User
+  userId: Int
+  id: Int
+  title: String
+  completed: Boolean
+}
+
+schema {
+  query: RootQueryType
+}

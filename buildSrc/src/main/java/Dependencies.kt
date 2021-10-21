@@ -15,4 +15,13 @@ object Dependencies {
     const val apolloRuntime = "com.apollographql.apollo:apollo-runtime:${Versions.apollo}"
     const val apolloCoroutines = "com.apollographql.apollo:apollo-coroutines-support:${Versions.apollo}"
 
+    // Lifecycle viewmodel
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Versions.lifeCycle}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycle}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
+    const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCycle}"
+
+    // UI Dependencies
+    private const val cardView = "androidx.cardview:cardview:${Versions.cardView}"
+    private const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
 }

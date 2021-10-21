@@ -10,4 +10,6 @@ apply {
 dependencies {
     implementation(Dependencies.coroutinesCore)
     implementation(Dependencies.coroutines)
+    implementation(Dependencies.apolloRuntime)
+    implementation(Dependencies.apolloCoroutines)
 }

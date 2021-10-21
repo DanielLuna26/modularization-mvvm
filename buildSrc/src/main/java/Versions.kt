@@ -16,4 +16,12 @@ object Versions {
 
     // Apollo
     const val apollo = "2.5.10"
+
+    // Life cycle and view model
+    const val lifeCycle = "2.3.1"
+
+    // UI Dependencies
+    const val cardView = "1.0.0"
+    const val recyclerView = "1.2.0-alpha04"
+    const val glide = "4.8.0"
 }

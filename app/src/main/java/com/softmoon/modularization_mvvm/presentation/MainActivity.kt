@@ -1,7 +1,8 @@
-package com.softmoon.modularization_mvvm
+package com.softmoon.modularization_mvvm.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.softmoon.modularization_mvvm.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
