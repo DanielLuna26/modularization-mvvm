@@ -6,6 +6,7 @@ plugins {
 apply {
     from("$rootDir/commons.gradle")
     from("$rootDir/core_dependencies.gradle")
+    from("$rootDir/network_dependencies.gradle")
 }
 
 apollo {
@@ -15,8 +16,5 @@ apollo {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":common"))
-    implementation(Dependencies.apolloRuntime)
-    implementation(Dependencies.apolloCoroutines)
-    implementation(Dependencies.coroutinesCore)
-    implementation(Dependencies.coroutines)
+    implementation(Dependencies.coroutinesLibs)
 }

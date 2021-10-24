@@ -5,11 +5,10 @@ plugins {
 apply {
     from("$rootDir/commons.gradle")
     from("$rootDir/core_dependencies.gradle")
+    from("$rootDir/network_dependencies.gradle")
 }
 
 dependencies {
-    implementation(Dependencies.coroutinesCore)
-    implementation(Dependencies.coroutines)
-    implementation(Dependencies.apolloRuntime)
-    implementation(Dependencies.apolloCoroutines)
+    implementation(Dependencies.coroutinesLibs)
+    implementation(Dependencies.retrofitLibs)
 }

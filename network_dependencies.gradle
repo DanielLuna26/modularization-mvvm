@@ -1,0 +1,8 @@
+dependencies {
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitGson
+    implementation Dependencies.gson
+    implementation Dependencies.okHttpLoging
+    implementation Dependencies.apolloRuntime
+    implementation Dependencies.apolloCoroutines
+}
