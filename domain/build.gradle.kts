@@ -1,5 +1,5 @@
 plugins {
-    id(Plugin.androidLibrary)
+    id(Plugins.androidLibrary)
 }
 
 apply {
@@ -11,4 +11,6 @@ apply {
 dependencies {
     implementation(project(":common"))
     implementation(Dependencies.coroutinesLibs)
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
 }

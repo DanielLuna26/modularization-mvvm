@@ -1,5 +1,5 @@
 plugins {
-    id(Plugin.androidLibrary)
+    id(Plugins.androidLibrary)
 }
 
 apply {
@@ -8,7 +8,14 @@ apply {
     from("$rootDir/network_dependencies.gradle")
 }
 
+android {
+    android.buildFeatures.viewBinding = true
+    android.buildFeatures.dataBinding = true
+}
+
 dependencies {
     implementation(Dependencies.coroutinesLibs)
+    implementation(Dependencies.lifecycleLibs)
+    implementation(Dependencies.navigationLibs)
     implementation(Dependencies.retrofitLibs)
 }

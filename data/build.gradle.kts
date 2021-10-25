@@ -1,5 +1,5 @@
 plugins {
-    id(Plugin.androidLibrary)
+    id(Plugins.androidLibrary)
     id("com.apollographql.apollo").version(Versions.apollo)
 }
 
@@ -17,4 +17,6 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":common"))
     implementation(Dependencies.coroutinesLibs)
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
 }

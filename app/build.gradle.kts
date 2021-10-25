@@ -1,8 +1,9 @@
 plugins {
-    id(Plugin.application)
-    id(Plugin.kotlinAndroid)
-    id(Plugin.kotlinKapt)
-    id("scripts.variants")
+    id(Plugins.application)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
+    id(Plugins.hilt)
+    id(Scripts.variants)
 }
 
 apply {
@@ -18,6 +19,9 @@ android {
         testInstrumentationRunner = AndroidConfig.androidTestInstrumentation
     }
 
+    android.buildFeatures.viewBinding = true
+    android.buildFeatures.dataBinding = true
+
     sourceSets {
         map { it.java.srcDir("src/${it.name}/java") }
     }
@@ -29,8 +33,11 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":data"))
     implementation(project(":domain"))
+    implementation(project(":presentation"))
 
-    implementation(Dependencies.lifecycleLibs)
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
+
 
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

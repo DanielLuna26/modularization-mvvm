@@ -7,8 +7,9 @@ import com.softmoon.data.remote.PostService
 import com.softmoon.domain.entity.Post
 import com.softmoon.domain.repository.PostRepository
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class PostRepositoryImpl(
+class PostRepositoryImpl @Inject constructor(
     private val postService: PostService,
     private val dispatcher: DispatcherProvider
 ) : PostRepository, SafeApiRequest() {
