@@ -27,7 +27,6 @@ abstract class SafeApiRequest {
                 else ->
                     Resource.Failure(false, null, throwable.message)
             }
-
         }
     }
 

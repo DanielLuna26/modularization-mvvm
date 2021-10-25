@@ -19,7 +19,12 @@ class PostRepositoryImpl @Inject constructor(
                 Resource
                     .Success(
                         response.value.posts()!!.map {
-                            Post(it.userId()!!, it.id()!!, it.title()!!, it.body()!!)
+                            Post(
+                                it.userId()!!,
+                                it.id()!!,
+                                it.title()!!,
+                                it.body()!!
+                            )
                         }
                     )
             is Resource.Failure -> response

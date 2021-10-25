@@ -12,5 +12,4 @@ class PostServiceImpl @Inject constructor(
     override suspend fun getPosts(): Response<PostQuery.Data> {
         return apolloClient.query(PostQuery()).await()
     }
-
 }

@@ -28,4 +28,8 @@ class PostsViewModel @Inject constructor(
             _result.value = it
         }
     }
+
+    fun resetResult() {
+        _result.value = null
+    }
 }
