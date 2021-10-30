@@ -1,12 +1,7 @@
 package com.softmoon.presentation.ui.main
 
-import android.content.Context
-import android.content.Intent
-import android.net.wifi.WifiManager
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -14,10 +9,6 @@ import com.softmoon.common.setupWithNavController
 import com.softmoon.presentation.R
 import com.softmoon.presentation.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import android.content.ComponentName
-
-
-
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -32,29 +23,6 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null)
             setupBottomNavigationBar()
-
-        binding.mainBtnActiveWifi.setOnClickListener {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-                val wifiManager =
-                    applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
-                wifiManager.isWifiEnabled = true
-            }
-        }
-
-        binding.mainBtnActiveMobileData.setOnClickListener {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                var intent: Intent? = null
-                intent = Intent(Settings.ACTION_DATA_USAGE_SETTINGS)
-                startActivity(intent)
-            } else {
-                val intent = Intent()
-                intent.component = ComponentName(
-                    "com.android.settings",
-                    "com.android.settings.Settings\$DataUsageSummaryActivity"
-                )
-                startActivity(intent)
-            }
-        }
 
         setSupportActionBar(binding.mainToolbar)
     }
