@@ -1,5 +1,0 @@
-rootProject.name = "Modularization MVVM"
-include ':app', ':common'
-include ':domain'
-include ':data'
-include ':presentation'

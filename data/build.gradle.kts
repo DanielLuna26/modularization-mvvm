@@ -16,6 +16,7 @@ apollo {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":common"))
+    implementation(TestDependencies.testLibraries)
     implementation(Dependencies.coroutinesLibs)
     implementation(Dependencies.hiltAndroid)
     kapt(Dependencies.hiltCompiler)
