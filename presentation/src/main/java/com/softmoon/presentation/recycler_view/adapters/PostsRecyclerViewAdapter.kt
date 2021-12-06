@@ -13,8 +13,8 @@ class PostsRecyclerViewAdapter: RecyclerView.Adapter<PostsRecyclerViewHolder>() 
     var items: List<Post> by basicDiffUtil(
         areItemsTheSame = { new, old ->
             new.id == old.id
-        }
-        ,areContentsTheSame = { new, old ->
+        },
+        areContentsTheSame = { new, old ->
             new == old
         }
     )

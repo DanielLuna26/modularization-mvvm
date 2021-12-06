@@ -49,10 +49,15 @@ class PostsFragment : Fragment(R.layout.fragment_posts) {
             response ?: return@observe
 
             when (response) {
-                is Resource.Failure -> handleApiErrors(response)
+                is Resource.Failure -> {
+                    handleApiErrors(response)
+                    binding.postsSwItems.isRefreshing = false
+                }
                 is Resource.Success -> {
                     postsAdapter.items = response.value
+                    binding.postsSwItems.isRefreshing = false
                 }
+                is Resource.Loading -> binding.postsSwItems.isRefreshing = true
             }
         }
     }

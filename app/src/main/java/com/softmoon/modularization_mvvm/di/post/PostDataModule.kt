@@ -1,8 +1,12 @@
 package com.softmoon.modularization_mvvm.di.post
 
+import com.softmoon.PostQuery
+import com.softmoon.data.mapper.Mapper
+import com.softmoon.data.mapper.PostMapper
 import com.softmoon.data.remote.PostService
 import com.softmoon.data.remote.PostServiceImpl
 import com.softmoon.data.repositories.PostRepositoryImpl
+import com.softmoon.domain.entity.Post
 import com.softmoon.domain.repository.PostRepository
 import dagger.Binds
 import dagger.Module

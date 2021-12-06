@@ -28,23 +28,23 @@ La siguiente imagen muestra la dependendencia entre las capas de clean architect
 
 En una aplicación sencilla o en algún modulo la organización de las capas seria la siguiente:
 
-* data
-    - repositories (Este contiene la implementación del repositorio)
-    - remote
-        * responses
-        * services
-    - local
-        * entities
-        * migrations
-        * daos
+* data/
+    - repositories/ (Este contiene la implementación del repositorio)
+    - remote/
+        * responses/
+        * services/
+    - local/
+        * entities/
+        * migrations/
+        * daos/
         * Converters.kt
         * Database.kt
-* domain
+* domain/
     - interactors
     - model
     - repositories (Este pertenece a logica de negocio, que solo es la interface)
-* view
-    - home
+* view/
+    - home/
         * HomeFragment.kt
         * HomeViewModel.kt
 
@@ -55,7 +55,11 @@ Lo siguiente, sería saber que pasa con **app**, este solo sería responsable de
 ## Puntos importantes
 
 DiffUtil: Esta utilidad sirve para mejorar el performance de un RecyclerView.
+
 Delegates: Estos sirven para obtener un valor, nos permiten hacer oneliners de algo en especifico.
+
 SafeApiRequest: Clase para hacer peticiones seguras, estas nos permiten identificar si hay un error o fue satisfactoria la llamada.
+
 Resource: Es una clase sellada que nos servirá para realizar un ViewStrategy esto se refiere en actualizar la vista segun el estado en el que se encuentre.
+
 Navigation Extensions: clase para no recargar las vistas al dar clic a un elemento del bottom nav.
