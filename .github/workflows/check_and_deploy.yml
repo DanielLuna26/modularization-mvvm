@@ -3,9 +3,9 @@ name: Test and deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 ## 2
 jobs:
