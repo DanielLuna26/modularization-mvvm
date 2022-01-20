@@ -27,6 +27,10 @@ android {
     }
 
     kapt { correctErrorTypes = true }
+
+    android.packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
 }
 
 dependencies {
