@@ -15,5 +15,4 @@ repositories {
 
 dependencies {
     implementation(Dependencies.gradle)
-    implementation(Dependencies.kotlinGradle)
 }
