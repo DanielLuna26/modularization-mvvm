@@ -19,9 +19,6 @@ android {
         testInstrumentationRunner = AndroidConfig.androidTestInstrumentation
     }
 
-    android.buildFeatures.viewBinding = true
-    android.buildFeatures.dataBinding = true
-
     sourceSets {
         map { it.java.srcDir("src/${it.name}/java") }
     }

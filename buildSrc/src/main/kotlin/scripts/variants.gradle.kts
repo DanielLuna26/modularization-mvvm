@@ -32,7 +32,7 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    flavorDimensions.add(FlavorDimensions.DEFAULT)
+    flavorDimensions(FlavorDimensions.DEFAULT)
     productFlavors {
         create(Flavors.DEV) {
             dimension = FlavorDimensions.DEFAULT

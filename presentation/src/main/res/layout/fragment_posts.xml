@@ -17,7 +17,6 @@
             android:id="@+id/posts_sw_items"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:refreshing="@{viewModel.result.loading}"
             app:onRefreshListener="@{() -> viewModel.requestPosts()}">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/posts_rv_items"
