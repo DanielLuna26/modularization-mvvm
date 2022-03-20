@@ -20,7 +20,7 @@ android {
     }
 
     sourceSets {
-        map { it.java.srcDir("src/${it.name}/java") }
+        map { it.java.srcDir("src/${it.name}/kotlin") }
     }
 
     kapt { correctErrorTypes = true }
