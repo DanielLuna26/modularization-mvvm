@@ -32,20 +32,18 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    flavorDimensions(FlavorDimensions.DEFAULT)
+
+    flavorDimensions.add(FlavorDimensions.DEFAULT)
     productFlavors {
         create(Flavors.DEV) {
-            dimension = FlavorDimensions.DEFAULT
             applicationIdSuffix = ".${Flavors.DEV}"
             versionNameSuffix = "-${Flavors.DEV}"
         }
         create(Flavors.STAGING) {
-            dimension = FlavorDimensions.DEFAULT
             applicationIdSuffix = ".${Flavors.STAGING}"
             versionNameSuffix = "-${Flavors.STAGING}"
         }
         create(Flavors.PROD) {
-            dimension = FlavorDimensions.DEFAULT
         }
     }
 }
